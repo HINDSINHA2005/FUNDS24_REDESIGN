@@ -94,10 +94,10 @@ const ValuesSection = ({ corePrinciples, whyChooseUs }) => {
                 <motion.article
                   key={item}
                   variants={itemVariants}
-                  whileHover={{ y: -5, scale: 1.01 }}
-                  className={`group rounded-[20px] border ${accents} bg-gradient-to-br p-4 text-center shadow-[0_8px_20px_rgba(11,26,56,0.06)] transition-all duration-300 hover:shadow-[0_12px_26px_rgba(11,26,56,0.1)]`}
+                  whileHover={{ y: 0 }}
+                  className={`group rounded-[20px] border ${accents} bg-gradient-to-br p-4 text-center shadow-[0_8px_20px_rgba(11,26,56,0.06)] transition-all duration-100 hover:shadow-[0_8px_20px_rgba(11,26,56,0.06)]`}
                 >
-                  <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-[16px] bg-ink text-white shadow-[0_12px_24px_rgba(17,39,77,0.22)] transition-transform duration-300 group-hover:scale-105">
+                  <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-[16px] bg-ink text-white shadow-[0_12px_24px_rgba(17,39,77,0.22)] transition-transform duration-100 group-hover:scale-100">
                     <Icon className="h-6 w-6" aria-hidden="true" />
                   </div>
                   <p className="mt-3 text-base font-semibold tracking-tight text-ink">{item}</p>
@@ -143,10 +143,10 @@ const ValuesSection = ({ corePrinciples, whyChooseUs }) => {
                 <motion.article
                   key={item}
                   variants={itemVariants}
-                  whileHover={{ y: -4, scale: 1.01 }}
-                  className={`group rounded-[20px] border ${tint} bg-gradient-to-br p-4 shadow-[0_8px_20px_rgba(11,26,56,0.06)] transition-all duration-300 hover:shadow-[0_12px_26px_rgba(11,26,56,0.1)]`}
+                  whileHover={{ y: 0 }}
+                  className={`group rounded-[20px] border ${tint} bg-gradient-to-br p-4 shadow-[0_8px_20px_rgba(11,26,56,0.06)] transition-all duration-100 hover:shadow-[0_8px_20px_rgba(11,26,56,0.06)]`}
                 >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-[14px] bg-white text-ink shadow-sm transition-transform duration-300 group-hover:scale-105">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-[14px] bg-white text-ink shadow-sm transition-transform duration-100 group-hover:scale-100">
                     <Icon className="h-5 w-5" aria-hidden="true" />
                   </div>
                   <p className="mt-3 text-xl font-semibold tracking-tight text-ink">

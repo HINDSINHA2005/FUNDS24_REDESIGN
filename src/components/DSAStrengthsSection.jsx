@@ -6,7 +6,7 @@ const floatVariants = {
   show: {
     opacity: 1,
     y: 0,
-    transition: { type: 'spring', stiffness: 260, damping: 26 }
+    transition: { type: 'spring', stiffness: 260, damping: 28 }
   }
 };
 
@@ -52,7 +52,7 @@ const DSAStrengthsSection = () => {
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true, amount: 0.2 }}
-                transition={{ delay: 0.08 * (index + 1) }}
+                transition={{ delay: 0.04 * (index + 1) }}
                 className={`absolute ${item.position} z-20 flex h-16 w-16 items-center justify-center rounded-2xl border border-slate-200 bg-white text-ink shadow-[0_10px_24px_rgba(11,26,56,0.08)]`}
               >
                 <Icon className="h-8 w-8" aria-hidden="true" />
@@ -65,7 +65,7 @@ const DSAStrengthsSection = () => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.2 }}
-            transition={{ delay: 0.35 }}
+            transition={{ delay: 0.15 }}
             className="absolute inset-x-0 bottom-0 z-10 mx-auto max-w-[620px] rounded-[24px] border border-slate-200 bg-white p-6 text-center shadow-[0_14px_34px_rgba(11,26,56,0.08)]"
           >
             <p className="font-['Poppins'] text-xl font-semibold tracking-tight text-ink sm:text-2xl">50+ Partners</p>

@@ -20,7 +20,7 @@ const itemVariants = {
 
 const LoanCategories = ({ items }) => {
   return (
-    <section className="section-shell scroll-mt-24 py-10 sm:scroll-mt-28 sm:py-14">
+    <section id="products" className="section-shell scroll-mt-24 py-10 sm:scroll-mt-28 sm:py-14">
       <div className="rounded-[32px] border border-white/70 bg-white/80 p-4 shadow-soft backdrop-blur-xl sm:p-6 lg:p-8">
         <div className="mb-5 flex items-end justify-between gap-3 px-2 sm:mb-6 sm:px-1">
           <div>
@@ -61,17 +61,17 @@ const LoanCategories = ({ items }) => {
                 key={item.title}
                 href="#products"
                 variants={itemVariants}
-                whileHover={{ y: -4, scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-                className={`group relative min-w-[140px] overflow-hidden rounded-[20px] ${colorScheme.bg} p-4 text-center border border-white/60 shadow-[0_8px_24px_rgba(11,26,56,0.08)] transition-all duration-300 hover:shadow-[0_12px_32px_rgba(11,26,56,0.12)] hover:border-white/80 sm:min-w-0`}
+                whileHover={{ y: 0 }}
+                whileTap={{ scale: 0.99 }}
+                transition={{ type: 'spring', stiffness: 260, damping: 28 }}
+                className={`group relative min-w-[140px] overflow-hidden rounded-[20px] ${colorScheme.bg} p-4 text-center border border-white/60 shadow-[0_8px_24px_rgba(11,26,56,0.08)] transition-all duration-100 hover:shadow-[0_8px_24px_rgba(11,26,56,0.08)] hover:border-white/60 sm:min-w-0`}
               >
                 {/* Top shine effect */}
                 <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/50 to-transparent opacity-50" />
 
                 {/* Icon container */}
-                <div className={`mx-auto inline-flex h-10 w-10 items-center justify-center rounded-lg ${colorScheme.badge} transition-transform duration-300 group-hover:scale-110`}>
-                  <CardIcon className={`h-5 w-5 ${colorScheme.icon} transition-transform duration-300 group-hover:rotate-[-4deg]`} aria-hidden="true" />
+                <div className={`mx-auto inline-flex h-10 w-10 items-center justify-center rounded-lg ${colorScheme.badge} transition-transform duration-100 group-hover:scale-100`}>
+                  <CardIcon className={`h-5 w-5 ${colorScheme.icon} transition-transform duration-100 group-hover:rotate-0`} aria-hidden="true" />
                 </div>
 
                 {/* Title */}

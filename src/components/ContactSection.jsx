@@ -92,11 +92,11 @@ const ContactSection = () => {
                   <motion.div
                     key={detail.label}
                     variants={itemVariants}
-                    whileHover={{ y: -2, scale: 1.01 }}
-                    className={`group rounded-[22px] border border-slate-100 bg-gradient-to-br ${accent} p-4 shadow-[0_8px_24px_rgba(11,26,56,0.05)] transition-all duration-300 hover:border-brand-100 hover:shadow-[0_12px_30px_rgba(11,26,56,0.08)]`}
+                    whileHover={{ y: 0 }}
+                    className={`group rounded-[22px] border border-slate-100 bg-gradient-to-br ${accent} p-4 shadow-[0_8px_24px_rgba(11,26,56,0.05)] transition-all duration-100 hover:border-slate-100 hover:shadow-[0_8px_24px_rgba(11,26,56,0.05)]`}
                   >
                     <div className="flex items-start gap-4">
-                      <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white text-brand-700 shadow-sm transition-transform duration-300 group-hover:scale-105">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white text-brand-700 shadow-sm transition-transform duration-100 group-hover:scale-100">
                         <DetailIcon className="h-5 w-5" aria-hidden="true" />
                       </div>
                       <div className="min-w-0 flex-1">
@@ -204,9 +204,9 @@ const ContactSection = () => {
               <p className="text-xs leading-5 text-slate-500">
                 By submitting, you agree that Funds24 may contact you regarding your request.
               </p>
-              <button className="group inline-flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-ink via-brand-700 to-blue-700 px-6 py-3.5 text-sm font-semibold text-white shadow-[0_16px_35px_rgba(11,26,56,0.18)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_22px_45px_rgba(11,26,56,0.22)]">
+              <button className="group inline-flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-ink via-brand-700 to-blue-700 px-6 py-3.5 text-sm font-semibold text-white shadow-[0_16px_35px_rgba(11,26,56,0.18)] transition-all duration-100 hover:-translate-y-0 hover:shadow-[0_16px_35px_rgba(11,26,56,0.18)]">
                 Request a Callback
-                <SendHorizontal className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                <SendHorizontal className="h-4 w-4 transition-transform duration-100 group-hover:translate-x-0" />
               </button>
             </div>
           </motion.form>

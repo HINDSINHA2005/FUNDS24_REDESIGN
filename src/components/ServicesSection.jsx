@@ -5,7 +5,7 @@ const containerVariants = {
   hidden: {},
   show: {
     transition: {
-      staggerChildren: 0.1
+      staggerChildren: 0.05
     }
   }
 };
@@ -15,7 +15,7 @@ const cardVariants = {
   show: {
     opacity: 1,
     y: 0,
-    transition: { type: 'spring', stiffness: 260, damping: 26 }
+    transition: { type: 'spring', stiffness: 260, damping: 28 }
   }
 };
 
@@ -41,7 +41,7 @@ const iconBgMap = ['bg-brand-700', 'bg-mint-700', 'bg-blue-700', 'bg-brand-700',
 
 const ServicesSection = ({ services }) => {
   return (
-    <section className="section-shell py-10 sm:py-14">
+    <section id="services" className="section-shell py-10 sm:py-14">
       <div className="mb-8 text-center sm:mb-10">
         <p className="pill-badge justify-center">What We Offer</p>
         <h2 className="mt-4 font-['Poppins'] text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
@@ -67,14 +67,14 @@ const ServicesSection = ({ services }) => {
             <motion.article
               key={service.title}
               variants={cardVariants}
-              whileHover={{ y: -5, scale: 1.01 }}
-              className={`group relative overflow-hidden rounded-[22px] border border-slate-200/80 bg-gradient-to-br ${accentMap[index] || accentMap[0]} p-4 shadow-[0_8px_22px_rgba(11,26,56,0.06)] transition-all duration-300 hover:border-brand-200 hover:shadow-[0_14px_30px_rgba(11,26,56,0.1)]`}
+              whileHover={{ y: 0 }}
+              className={`group relative overflow-hidden rounded-[22px] border border-slate-200/80 bg-gradient-to-br ${accentMap[index] || accentMap[0]} p-4 shadow-[0_8px_22px_rgba(11,26,56,0.06)] transition-all duration-100 hover:border-slate-200/80 hover:shadow-[0_8px_22px_rgba(11,26,56,0.06)]`}
             >
               <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand-200 to-transparent opacity-70" />
-              <div className="absolute -right-10 -top-10 h-24 w-24 rounded-full bg-white/50 blur-3xl opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+              <div className="absolute -right-10 -top-10 h-24 w-24 rounded-full bg-white/50 blur-3xl opacity-0 transition-opacity duration-200 group-hover:opacity-0" />
 
               <div className="relative z-10">
-                <div className="flex h-14 w-14 items-center justify-center rounded-[18px] bg-white shadow-[0_10px_24px_rgba(11,26,56,0.08)] transition-transform duration-300 group-hover:scale-105">
+                <div className="flex h-14 w-14 items-center justify-center rounded-[18px] bg-white shadow-[0_10px_24px_rgba(11,26,56,0.08)] transition-transform duration-100 group-hover:scale-100">
                   <div className={`flex h-10 w-10 items-center justify-center rounded-[14px] ${iconBgMap[index] || iconBgMap[0]} text-white`}>
                     <ServiceIcon className="h-5 w-5" aria-hidden="true" />
                   </div>
@@ -98,9 +98,9 @@ const ServicesSection = ({ services }) => {
                   ))}
                 </div>
 
-                <div className="mt-6 flex items-center gap-2 text-sm font-semibold text-ink transition-colors duration-300 group-hover:text-brand-700">
+                <div className="mt-6 flex items-center gap-2 text-sm font-semibold text-ink transition-colors duration-100 group-hover:text-brand-700">
                   Learn More
-                  <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                  <ArrowUpRight className="h-4 w-4 transition-transform duration-100 group-hover:-translate-y-0 group-hover:translate-x-0" />
                 </div>
               </div>
             </motion.article>

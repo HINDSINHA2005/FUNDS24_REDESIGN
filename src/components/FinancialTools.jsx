@@ -5,7 +5,7 @@ const containerVariants = {
   hidden: {},
   show: {
     transition: {
-      staggerChildren: 0.1
+      staggerChildren: 0.05
     }
   }
 };
@@ -15,13 +15,13 @@ const cardVariants = {
   show: {
     opacity: 1,
     y: 0,
-    transition: { type: 'spring', stiffness: 300, damping: 30 }
+    transition: { type: 'spring', stiffness: 260, damping: 28 }
   }
 };
 
 const FinancialTools = ({ items }) => {
   return (
-    <section id="about" className="section-shell scroll-mt-24 py-10 sm:scroll-mt-28 sm:py-14">
+    <section className="section-shell scroll-mt-24 py-10 sm:scroll-mt-28 sm:py-14">
       <div className="mb-8 text-center sm:mb-10">
         <p className="pill-badge justify-center">Smart Decisioning</p>
         <h2 className="mt-4 font-['Poppins'] text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
@@ -58,12 +58,12 @@ const FinancialTools = ({ items }) => {
             <motion.div
               key={tool.title}
               variants={cardVariants}
-              whileHover={{ y: -4, scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
+              whileHover={{ y: 0 }}
+              whileTap={{ scale: 0.99 }}
               className="group"
             >
               <div
-                className={`relative overflow-hidden rounded-[22px] ${colorScheme.bg} p-4 sm:p-5 border border-white/60 shadow-[0_8px_24px_rgba(11,26,56,0.08)] transition-all duration-300 hover:shadow-[0_12px_32px_rgba(11,26,56,0.12)] hover:border-white/80 cursor-pointer`}
+                className={`relative overflow-hidden rounded-[22px] ${colorScheme.bg} p-4 sm:p-5 border border-white/60 shadow-[0_8px_24px_rgba(11,26,56,0.08)] transition-all duration-100 hover:shadow-[0_8px_24px_rgba(11,26,56,0.08)] hover:border-white/60 cursor-pointer`}
               >
                 {/* Top shine effect */}
                 <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/50 to-transparent opacity-50" />
@@ -71,8 +71,8 @@ const FinancialTools = ({ items }) => {
                 {/* Content wrapper */}
                 <div className="relative z-10">
                   {/* Icon container */}
-                  <div className={`inline-flex h-10 w-10 items-center justify-center rounded-lg ${colorScheme.badge} transition-transform duration-300 group-hover:scale-110`}>
-                    <ToolIcon className={`h-5 w-5 ${colorScheme.icon} transition-transform duration-300 group-hover:rotate-[-4deg]`} aria-hidden="true" />
+                  <div className={`inline-flex h-10 w-10 items-center justify-center rounded-lg ${colorScheme.badge} transition-transform duration-100 group-hover:scale-100`}>
+                    <ToolIcon className={`h-5 w-5 ${colorScheme.icon} transition-transform duration-100 group-hover:rotate-0`} aria-hidden="true" />
                   </div>
 
                   {/* Text content */}
@@ -85,10 +85,10 @@ const FinancialTools = ({ items }) => {
 
                   {/* Check Now link */}
                   <div className="mt-4 flex items-center gap-1.5">
-                    <a href="#" className="text-sm font-semibold text-ink hover:text-brand-600 transition-colors duration-200">
+                    <a href="#" className="text-sm font-semibold text-ink hover:text-brand-500 transition-colors duration-100">
                       Check Now
                     </a>
-                    <ArrowRight className="h-4 w-4 text-ink group-hover:translate-x-1 transition-transform duration-200" />
+                    <ArrowRight className="h-4 w-4 text-ink group-hover:translate-x-0 transition-transform duration-100" />
                   </div>
                 </div>
               </div>

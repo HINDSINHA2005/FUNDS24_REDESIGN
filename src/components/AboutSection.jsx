@@ -29,7 +29,7 @@ const statVariants = {
 
 const AboutSection = ({ stats }) => {
   return (
-    <section id="services" className="section-shell scroll-mt-24 py-10 sm:scroll-mt-28 sm:py-14">
+    <section id="about" className="section-shell scroll-mt-24 py-10 sm:scroll-mt-28 sm:py-14">
       <motion.div
         variants={containerVariants}
         initial="hidden"
@@ -112,8 +112,8 @@ const AboutSection = ({ stats }) => {
               <motion.div
                 key={stat.value}
                 variants={statVariants}
-                whileHover={{ scale: 1.02, y: -2 }}
-                className={`rounded-[20px] border ${colorScheme.accent}/50 bg-gradient-to-br ${colorScheme.bg} p-5 sm:p-6 shadow-[0_8px_24px_rgba(11,26,56,0.08)] transition-all duration-300 hover:shadow-[0_12px_32px_rgba(11,26,56,0.12)]`}
+                whileHover={{ scale: 1 }}
+                className={`rounded-[20px] border ${colorScheme.accent}/50 bg-gradient-to-br ${colorScheme.bg} p-5 sm:p-6 shadow-[0_8px_24px_rgba(11,26,56,0.08)] transition-all duration-100 hover:shadow-[0_8px_24px_rgba(11,26,56,0.08)]`}
               >
                 <div className="flex items-start gap-4">
                   <div className={`flex h-12 w-12 items-center justify-center rounded-xl ${colorScheme.icon} flex-shrink-0`}>

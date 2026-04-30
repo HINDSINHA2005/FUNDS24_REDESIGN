@@ -67,21 +67,21 @@ const Navbar = ({ brandLogo, navItems, brandName = 'Funds24', onMenuItemClick })
   );
 
   const itemBaseClass =
-    'relative rounded-full px-4 py-2 text-sm font-medium tracking-tight transition-colors duration-300 md:px-5';
+    'relative rounded-full px-4 py-2 text-sm font-medium tracking-tight transition-colors duration-100 md:px-5';
 
   return (
     <motion.header
       initial={{ opacity: 0, y: -18 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.55, ease: 'easeOut' }}
-      className="sticky top-0 z-30"
+      transition={{ duration: 0.2, ease: 'easeOut' }}
+      className="sticky top-0 z-30 w-full"
     >
-      <div className="section-shell pt-4 sm:pt-6">
+      <div className="w-full">
         <div
-          className={`rounded-3xl border backdrop-blur-2xl transition-all duration-300 ${headerClassName}`}
+          className={`border-b backdrop-blur-2xl transition-all duration-150 ${headerClassName}`}
         >
-          <nav className="flex items-center justify-between px-4 py-3 sm:px-5 sm:py-3.5">
-            <a href="#home" className="flex items-center gap-3" aria-label={`${brandName} Home`}>
+          <nav className="section-shell flex items-center justify-between py-3 sm:py-3.5">
+            <a href="#home" className="flex items-center gap-3 -ml-3 sm:ml-0" aria-label={`${brandName} Home`}>
               <img
                 src={brandLogo}
                 alt={brandName}
@@ -98,17 +98,17 @@ const Navbar = ({ brandLogo, navItems, brandName = 'Funds24', onMenuItemClick })
                     key={item.label}
                     href={item.href}
                     onClick={() => onMenuItemClick?.()}
-                    className={`${itemBaseClass} group overflow-hidden ${isActive ? 'text-brand-700' : 'text-slate-600 hover:text-slate-950'}`}
+                    className={`${itemBaseClass} group overflow-hidden ${isActive ? 'text-brand-700' : 'text-slate-600 hover:text-slate-800'}`}
                   >
                     <span className="relative z-10">{item.label}</span>
                     {isActive ? (
                       <motion.span
                         layoutId="activeNavPill"
                         className="absolute inset-0 rounded-full bg-white/90 shadow-[0_10px_24px_rgba(47,128,255,0.12)]"
-                        transition={{ type: 'spring', stiffness: 380, damping: 28 }}
+                        transition={{ type: 'spring', stiffness: 300, damping: 30 }}
                       />
                     ) : null}
-                    <span className="absolute inset-x-4 -bottom-0.5 h-0.5 origin-left scale-x-0 rounded-full bg-gradient-to-r from-brand-500 to-mint-500 transition-transform duration-300 group-hover:scale-x-100" />
+                    <span className="absolute inset-x-4 -bottom-0.5 h-0.5 origin-left scale-x-0 rounded-full bg-gradient-to-r from-brand-500 to-mint-500 transition-transform duration-100 group-hover:scale-x-100" />
                   </a>
                 );
               })}
@@ -117,16 +117,16 @@ const Navbar = ({ brandLogo, navItems, brandName = 'Funds24', onMenuItemClick })
             <div className="hidden items-center gap-3 md:flex">
               <motion.a
                 href="#contact"
-                whileHover={{ scale: 1.02 }}
+                whileHover={{ scale: 1 }}
                 whileTap={{ scale: 0.98 }}
-                className="rounded-full bg-gradient-to-r from-brand-600 via-brand-500 to-mint-500 px-5 py-2.5 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(47,128,255,0.2)] transition-shadow duration-300 hover:shadow-[0_18px_36px_rgba(47,128,255,0.26)]"
+                className="rounded-full bg-gradient-to-r from-brand-600 via-brand-500 to-mint-500 px-5 py-2.5 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(47,128,255,0.2)] transition-shadow duration-100 hover:shadow-[0_12px_30px_rgba(47,128,255,0.2)]"
               >
                 Sign Up
               </motion.a>
             </div>
 
             <button
-              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/50 bg-white/55 text-slate-700 backdrop-blur-xl transition hover:bg-white/80 md:hidden"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/50 bg-white/55 text-slate-700 backdrop-blur-xl transition duration-100 hover:bg-white/70 md:hidden"
               onClick={() => setMobileMenuOpen((prev) => !prev)}
               aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={mobileMenuOpen}
@@ -141,7 +141,7 @@ const Navbar = ({ brandLogo, navItems, brandName = 'Funds24', onMenuItemClick })
                 initial={{ opacity: 0, y: -8, height: 0 }}
                 animate={{ opacity: 1, y: 0, height: 'auto' }}
                 exit={{ opacity: 0, y: -8, height: 0 }}
-                transition={{ duration: 0.25, ease: 'easeOut' }}
+                transition={{ duration: 0.15, ease: 'easeOut' }}
                 className="overflow-hidden px-4 pb-4 md:hidden"
               >
                 <div className="rounded-2xl border border-white/40 bg-white/72 p-3 shadow-[0_18px_40px_rgba(8,21,47,0.12)] backdrop-blur-xl">
@@ -156,8 +156,8 @@ const Navbar = ({ brandLogo, navItems, brandName = 'Funds24', onMenuItemClick })
                         }}
                         initial={{ opacity: 0, x: -8 }}
                         animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: index * 0.04 }}
-                        className="flex items-center justify-between rounded-xl px-4 py-3 text-sm font-medium text-slate-700 transition hover:bg-white/75 hover:text-slate-950"
+                        transition={{ delay: index * 0.02 }}
+                        className="flex items-center justify-between rounded-xl px-4 py-3 text-sm font-medium text-slate-700 transition duration-100 hover:bg-white/65 hover:text-slate-900"
                       >
                         <span>{item.label}</span>
                         <span className="h-1.5 w-1.5 rounded-full bg-brand-500" />
@@ -167,8 +167,8 @@ const Navbar = ({ brandLogo, navItems, brandName = 'Funds24', onMenuItemClick })
 
                   <motion.a
                     href="#contact"
-                    whileTap={{ scale: 0.98 }}
-                    className="mt-3 block rounded-xl bg-gradient-to-r from-brand-600 via-brand-500 to-mint-500 px-5 py-3 text-center text-sm font-semibold text-white shadow-[0_12px_30px_rgba(47,128,255,0.22)]"
+                    whileTap={{ scale: 0.97 }}
+                    className="mt-3 block rounded-xl bg-gradient-to-r from-brand-600 via-brand-500 to-mint-500 px-5 py-3 text-center text-sm font-semibold text-white shadow-[0_12px_30px_rgba(47,128,255,0.18)]"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Sign Up
